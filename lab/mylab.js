@@ -1,6 +1,9 @@
 //function(request, callback) {}
 //request - reprezentuje request http
 //callback - zwraca rezultat
+var AWS = require('aws-skd');
+
+AWS.config.loadFromPath('./config.json');
 
 var params = {
 	DryRun: true || false,
@@ -22,7 +25,8 @@ var params = {
 	NextToken: 'STRING_VALUE'
 };
 
-describeInstances(params, function(err, data) {
+var task = function(request, callback){
+	ec2.describeInstances(params, function(err, data) {
 	if (err) console.log(err, err.stack);
-	else	console.log(data);
+	else	/*console.log*/callback(null, data);
 });	

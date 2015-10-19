@@ -1,9 +1,9 @@
 var lab1_1 = require("./lab/lab1_1").lab
 var example_1 = require("./example_1").lab;
 var mylab = require("./lab/mylab").lab;
-var AWS = require('aws-skd');
+//var AWS = require('aws-skd');
 
-AWS.config.loadFromPath('./config.json');
+//AWS.config.loadFromPath('./config.json');
 
 var PORT = 8080;
 
